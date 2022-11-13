@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "login",
+			"name": "new_login",
 			"event": [
 				{
 					"listen": "test",
@@ -36,69 +36,57 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "authority",
-						"value": "api.octoperf.com"
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:106.0) Gecko/20100101 Firefox/106.0"
 					},
 					{
-						"key": "accept",
+						"key": "Accept",
 						"value": "application/json, text/plain, */*"
 					},
 					{
-						"key": "accept-language",
-						"value": "en-US,en;q=0.9,th;q=0.8"
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.5"
 					},
 					{
-						"key": "content-type",
-						"value": "application/x-www-form-urlencoded;charset=UTF-8"
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
 					},
 					{
-						"key": "cookie",
-						"value": "_ga=GA1.2.2009056722.1667546287; __stripe_mid=747b210c-b54d-40c0-8247-dcf9fee11fd7e4dbff; _gid=GA1.2.1255352702.1667640187; slaask-token-5a5eed8e193aa4456766852b0d3bdd64=fd03hqprjpm58rvv79ezoi44zj1m69do9gqr34ebp5eh; __stripe_sid=f22f87e9-666b-46d7-876c-1e5ab5a1951b1c36a3"
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded;charset=utf-8"
 					},
 					{
-						"key": "dnt",
-						"value": "1"
-					},
-					{
-						"key": "origin",
+						"key": "Origin",
 						"value": "https://api.octoperf.com"
 					},
 					{
-						"key": "referer",
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Referer",
 						"value": "https://api.octoperf.com/app/"
 					},
 					{
-						"key": "sec-ch-ua",
-						"value": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\""
+						"key": "Cookie",
+						"value": "_ga=GA1.2.1106918228.1668276966; _gid=GA1.2.413817891.1668276966; __stripe_mid=402a2f3b-6255-4d62-b15a-070f9a1e91123e2266; __stripe_sid=dbad3210-7b2e-422d-b726-7e5ab037962c25ad03; slaask-token-5a5eed8e193aa4456766852b0d3bdd64=0e55i7l11l5n0k1n6rregdzfux9swq87m0lelyt4xbfyrn"
 					},
 					{
-						"key": "sec-ch-ua-mobile",
-						"value": "?1"
-					},
-					{
-						"key": "sec-ch-ua-platform",
-						"value": "\"Android\""
-					},
-					{
-						"key": "sec-fetch-dest",
+						"key": "Sec-Fetch-Dest",
 						"value": "empty"
 					},
 					{
-						"key": "sec-fetch-mode",
+						"key": "Sec-Fetch-Mode",
 						"value": "cors"
 					},
 					{
-						"key": "sec-fetch-site",
+						"key": "Sec-Fetch-Site",
 						"value": "same-origin"
-					},
-					{
-						"key": "user-agent",
-						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "username=jaruwanpatt%40gmail.com&password=Jpjp%406751"
+					"raw": "username=sdet.jaruwan%40gmail.com&password=ST1q2w3e4r%25%5E"
 				},
 				"url": {
 					"raw": "https://api.octoperf.com/public/users/login",
@@ -141,14 +129,15 @@
 							"    pm.expect(responseData[1].name).to.equal(\"SpaceX-API\");",
 							"})",
 							"",
-							"pm.test(\"Verify name equals to <SWAPI - Star Wars API Integrations> for [member-of] request\",function(){",
-							"    pm.expect(responseData[2].name).to.equal(\"SWAPI - Star Wars API Integrations\");",
-							"})",
-							" ",
 							"pm.test(\"Verify name equals to <FakeRESTApi> for [member-of] request\",function(){",
-							"    pm.expect(responseData[3].name).to.equal(\"FakeRESTApi\");",
+							"    pm.expect(responseData[2].name).to.equal(\"FakeRESTApi\");",
 							"})",
 							" ",
+							"pm.test(\"Verify name equals to <SWAPI - Star Wars API Integrations> for [member-of] request\",function(){",
+							"    pm.expect(responseData[3].name).to.equal(\"SWAPI - Star Wars API Integrations\");",
+							"})",
+							" ",
+							"",
 							"",
 							"//var workspace_id = responseData[1].id;",
 							"//console.log(workspace_id);",
@@ -463,7 +452,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"\",\n    \"created\": \"2022-11-10T08:30:21.288Z\",\n    \"lastModified\": \"2022-11-10T08:30:21.288Z\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\",\n    \"name\": \"New Project : {{currentdate}} \",\n    \"description\": \"new project : {{currentdate}}\",\n    \"type\": \"DESIGN\",\n    \"tags\": []\n}"
+					"raw": "{\n    \"id\": \"\",\n    \"created\": \"2022-11-10T08:30:21.288Z\",\n    \"lastModified\": \"2022-11-10T08:30:21.288Z\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\",\n    \"name\": \"SpaceX-API Proj : {{currentdate}}\",\n    \"description\": \"SpaceX-API Proj  Desc - {{currentdate}}\",\n    \"type\": \"DESIGN\",\n    \"tags\": []\n}"
 				},
 				"url": {
 					"raw": "https://api.octoperf.com/design/projects?workspaceId={{workspaceId}}",
@@ -638,7 +627,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"created\": 1668128560046,\n    \"description\": \"descdd\",\n    \"id\": \"{{projectId}}\",\n    \"lastModified\": 1668128660898,\n    \"name\": \"update new projectname :: {{currentdate}} -- will be deleted soon\",\n    \"tags\": [],\n    \"type\": \"DESIGN\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\"\n}"
+					"raw": "{\n    \"created\": 1668128560046,\n    \"description\": \"desc {{currentdate}}\",\n    \"id\": \"{{projectId}}\",\n    \"lastModified\": 1668128660898,\n    \"name\": \"Project - {{currentdate}}\",\n    \"tags\": [],\n    \"type\": \"DESIGN\",\n    \"userId\": \"{{userId}}\",\n    \"workspaceId\": \"{{workspaceId}}\"\n}"
 				},
 				"url": {
 					"raw": "https://api.octoperf.com/design/projects/{{projectId}}",
